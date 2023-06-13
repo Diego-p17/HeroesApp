@@ -1,0 +1,23 @@
+<div class="flex align-items-center justify-content-center mt-5">
+
+  <div class="flex flex-column  shadow-8 p-5 border-round-md mw-100">
+    <span class="text-lg mb-4">Login</span>
+
+    <mat-form-field>
+      <mat-label>UserName</mat-label>
+      <input type="text" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password" matInput>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="onLogin()">
+      <mat-icon>arrow_forward_ios</mat-icon>
+      submit
+    </button>
+
+    <div class="flex justify-content-center mt-5">
+      <span>do not have an account? <a routerLink="/auth/new-account">register</a></span>
+    </div>
+  </div>
+</div>

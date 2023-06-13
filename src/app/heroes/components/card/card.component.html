@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ hero.superhero }}</mat-card-title>
+    <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+  </mat-card-header>
+  <img [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image class="mt-3">
+  <mat-card-content class="mt-3">
+    <h4>{{ hero.publisher}} </h4>
+    <strong>appearance</strong>
+    <p>{{hero.first_appearance}}</p>
+    <mat-chip class="m-1"
+      *ngFor="let character of hero.characters.split(',') | slice:0:2">
+      {{character}}
+    </mat-chip>
+  </mat-card-content>
+  <mat-divider class="mt-2 mb-2"></mat-divider>
+  <mat-card-actions>
+    <button mat-button mat-raised [routerLink]="['/heroes/edit',hero.id]">
+      <mat-icon color="primary">edit</mat-icon>
+      edit
+    </button>
+    <span class="spacer"></span>
+    <button mat-button mat-raised [routerLink]="['/heroes',hero.id]">
+      <mat-icon color="primary">more_horizont</mat-icon>
+      more
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,5 +1,12 @@
 # HeroesApp
 
+## DEV
+
+1. clone Project
+2. execute     ``` npm install  ```
+3. run backend ``` npm run backend  ```
+2. run app     ``` ng serve  ```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
 ## Development server
